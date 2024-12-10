@@ -1,3 +1,4 @@
+//Dimensionaes del tablero
 const ROWS = 8;
 const COLS = 8;
 const MINES = 10;
@@ -8,6 +9,7 @@ let mineLocations = [];
 let minesRemaining = MINES;
 let revealedCells = 0;
 
+//Crea celdas y lo inicializa
 function initializeGrid() {
   for (let i = 0; i < ROWS; i++) {
     cells[i] = [];
@@ -24,6 +26,8 @@ function initializeGrid() {
   }
 }
 
+
+//Colocar las minas aleatoriamente
 function placeMines() {
   for (let i = 0; i < MINES; i++) {
     let row, col;
@@ -36,6 +40,7 @@ function placeMines() {
   }
 }
 
+//Maneja un click
 function handleCellClick(event) {
   let cell = event.target;
   let row = parseInt(cell.dataset.row);
@@ -62,6 +67,7 @@ function handleCellClick(event) {
   }
 }
 
+//Calculo de las minas adyacentes
 function countAdjacentMines(row, col) {
   let count = 0;
   for (let i = Math.max(0, row - 1); i <= Math.min(row + 1, ROWS - 1); i++) {
@@ -74,6 +80,7 @@ function countAdjacentMines(row, col) {
   return count;
 }
 
+//Revela las celdas vacías
 function revealEmptyCells(row, col) {
   for (let i = Math.max(0, row - 1); i <= Math.min(row + 1, ROWS - 1); i++) {
     for (let j = Math.max(0, col - 1); j <= Math.min(col + 1, COLS - 1); j++) {
@@ -92,14 +99,16 @@ function revealEmptyCells(row, col) {
   }
 }
 
+//Para el final revela las vacias
 function revealMines() {
   mineLocations.forEach(location => {
     let { row, col } = location;
-    cells[row][col].textContent = '*';
+    cells[row][col].textContent = '*'; //aqui podemos poner simbolos de mina X, *. ...
     cells[row][col].classList.add('revealed', 'mine');
   });
 }
 
+//El mensaje de estado
 function showMessage(message, isGameOver) {
   let messageElement = document.getElementById('message');
   messageElement.textContent = message;
@@ -115,10 +124,12 @@ function showMessage(message, isGameOver) {
   }
 }
 
+//Desabilitamos los clicks
 function disableGrid() {
   grid.style.pointerEvents = 'none';
 }
 
+//Para resetear el juego
 function resetGame() {
   grid.innerHTML = ''; 
   mineLocations = [];
@@ -130,5 +141,6 @@ function resetGame() {
   grid.style.pointerEvents = 'auto';
 }
 
+//Inicializar
 initializeGrid();
 placeMines();
