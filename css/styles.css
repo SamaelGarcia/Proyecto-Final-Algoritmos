@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Oswald:wght@200..700&family=Playwrite+HR+Lijeva:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content {
+    min-height: 80px;
+    background: linear-gradient(90deg, rgba(203,18,133,1) 0%, rgba(80,49,145,1) 50%);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}
+
+.menu .nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu .nav ul li {
+    margin: 0 10px;
+}
+
+.menu .nav ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: white;
+    display: block;
+    font-weight: bold;
+}
+
+.menu nav ul li a:hover,
+.menu-item:hover {
+    background-color: white;
+    color: rgba(80,49,145);
+}
+
+main {
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    margin: 50px 0; /* Espaciado superior e inferior */
+}
+
+.welcome-container {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+h1 {
+    margin: 20px 0; /* Espaciado superior e inferior */
+    font-size: 2.5em; /* Tamaño de fuente más grande */
+    color: rgba(203, 18, 133, 1); /* Color del texto */
+}
+
+p {
+    font-size: 1.2em; /* Tamaño de fuente para los párrafos */
+    margin: 10px 0; /* Espaciado entre párrafos */
+    text-align: justify;
+}
+
+footer {
+    background-color: rgba(80, 49, 145, 1); /* Color del footer */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.saludo {
+    text-align: center;
+}

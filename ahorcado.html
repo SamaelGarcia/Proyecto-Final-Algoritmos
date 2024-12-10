@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Algoritmos - Ahorcado</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/ahorcado.css"> <!-- Incluye el CSS del juego Ahorcado -->
+</head>
+<body>
+    <header>
+        <div class="content">
+            <div class="menu container">
+                <a href="index.html" class="logo">Samael Garcia</a>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="/index.html">Inicio</a></li>
+                        <li><a href="/ahorcado.html">Juego Ahorcado</a></li>
+                        <li><a href="/buscaminas.html">Juego Buscaminas</a></li>
+                        <li><a href="/acerca-de.html">Acerca de</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Juego de Ahorcado</h1>
+        <br><br>
+        <p>Introduce una letra para jugar:</p>
+        <input type="text" id="letra" maxlength="1">
+        <button id="calcular">Evaluar letra</button>
+        <p id="salida"></p>
+        <div id="ahorcado"></div>
+
+        <div id="ganador" style="display: none;"> <!-- Ocultar inicialmente -->
+            <p>¡Victoria!</p>
+            <p>¡Felicidades!</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&#169; Derechos reservados Samael García</p>
+    </footer>
+
+    <script src="/js/app2.js"></script> <!-- Incluye el script del juego Ahorcado -->
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Algoritmos - Buscaminas</title>
+  <link rel="stylesheet" type="text/css" href="/css/buscaminas.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  
+</head>
+<body>
+  <header>
+    <div class="content">
+      <div class="menu container">
+        <a href="index.html" class="logo">Samael Garcia</a>
+        <nav class="nav">
+          <ul>
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/ahorcado.html">Juego Ahorcado</a></li>
+            <li><a href="/buscaminas.html" class="menu-item">Juego Buscaminas</a></li>
+            <li><a href="/acerca-de.html">Acerca de</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- <main>
+    <h1>Juego de Buscaminas</h1>
+    <div id="message"></div>
+    <div class="grid" id="grid"></div>
+    <button onclick="resetGame()">Reiniciar</button>
+  </main> -->
+  <main>
+    <h1>Juego de Buscaminas</h1>
+    <p class="instructions">
+      Bienvenido al juego de Buscaminas. El objetivo es descubrir todas las casillas que no contienen minas. 
+      Haz clic en una casilla para revelarla. Si revelas una mina, ¡perderás! 
+      Si revelas un número, este indica cuántas minas hay en las casillas adyacentes. 
+      ¡Buena suerte!
+    </p>
+    <div id="message"></div>
+    <div class="grid" id="grid"></div>
+    <button onclick="resetGame()">Reiniciar</button>
+  </main>
+
+  <footer>
+    <p>&#169; Derechos reservados Samael García</p>
+  </footer>
+
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
